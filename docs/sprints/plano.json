@@ -1,0 +1,416 @@
+{
+  "schema_version": "1",
+  "plan_version": "1.0",
+  "created_at_local": "2026-11-13",
+  "timezone": "America/Manaus",
+  "project": "AI_Inteligence",
+  "intended_project_path": "/home/alvaro/Documentos/AI_Inteligence",
+  "intended_docs_path": "/home/alvaro/Documentos/AI_Inteligence/docs/sprints",
+  "repository_inspected": false,
+  "requested_execution_profile": "Codex Astra-6; esforço extra alto, conforme disponibilidade na interface",
+  "implemented_by_this_package": false,
+  "sprints": [
+    {
+      "id": "S00",
+      "file": "S00_inventario_baseline.md",
+      "title": "Inventário do projeto e baseline",
+      "deps": [],
+      "requirements": [
+        "R01",
+        "R22",
+        "R23"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S01",
+      "file": "S01_fundacao_dominio.md",
+      "title": "Fundação de domínio e persistência",
+      "deps": [
+        "S00"
+      ],
+      "requirements": [
+        "R01",
+        "R03",
+        "R04",
+        "R10",
+        "R23"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S02",
+      "file": "S02_autenticacao_permissoes.md",
+      "title": "Autenticação, permissões e isolamento",
+      "deps": [
+        "S01"
+      ],
+      "requirements": [
+        "R02",
+        "R04",
+        "R12",
+        "R23"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S03",
+      "file": "S03_chat_sessoes_layout.md",
+      "title": "Chat persistente e estrutura da interface",
+      "deps": [
+        "S02"
+      ],
+      "requirements": [
+        "R03",
+        "R11",
+        "R13",
+        "R21"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S04",
+      "file": "S04_adaptador_a2a.md",
+      "title": "Adaptador A2A corporativo",
+      "deps": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "requirements": [
+        "R22",
+        "R10",
+        "R11"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S05",
+      "file": "S05_jobs_filas_eventos.md",
+      "title": "Jobs duráveis, fila e eventos de progresso",
+      "deps": [
+        "S01",
+        "S02",
+        "S04"
+      ],
+      "requirements": [
+        "R07",
+        "R10",
+        "R11",
+        "R23"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S06",
+      "file": "S06_biblioteca_upload.md",
+      "title": "Biblioteca e upload de arquivos grandes",
+      "deps": [
+        "S02",
+        "S03",
+        "S05"
+      ],
+      "requirements": [
+        "R04",
+        "R05",
+        "R06",
+        "R23"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S07",
+      "file": "S07_extracao_formatos.md",
+      "title": "Extração estruturada de formatos",
+      "deps": [
+        "S05",
+        "S06"
+      ],
+      "requirements": [
+        "R06",
+        "R08",
+        "R09"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S08",
+      "file": "S08_ocr_qualidade.md",
+      "title": "OCR, layout e qualidade de extração",
+      "deps": [
+        "S07"
+      ],
+      "requirements": [
+        "R06",
+        "R08",
+        "R09",
+        "R11"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S09",
+      "file": "S09_dados_calculos.md",
+      "title": "Dados tabulares, filtros e cálculos verificáveis",
+      "deps": [
+        "S07"
+      ],
+      "requirements": [
+        "R08",
+        "R09",
+        "R14"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S10",
+      "file": "S10_rag_busca_hibrida.md",
+      "title": "Chunks, embeddings e busca híbrida",
+      "deps": [
+        "S02",
+        "S07",
+        "S08",
+        "S09"
+      ],
+      "requirements": [
+        "R09",
+        "R10",
+        "R12"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S11",
+      "file": "S11_analise_sequencial.md",
+      "title": "Análise sequencial e entregas por arquivo",
+      "deps": [
+        "S04",
+        "S05",
+        "S07",
+        "S08",
+        "S09",
+        "S10"
+      ],
+      "requirements": [
+        "R05",
+        "R07",
+        "R08",
+        "R10",
+        "R11",
+        "R22"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S12",
+      "file": "S12_contexto_memoria.md",
+      "title": "Contexto, memória e referências persistentes",
+      "deps": [
+        "S02",
+        "S03",
+        "S10",
+        "S11"
+      ],
+      "requirements": [
+        "R03",
+        "R09",
+        "R10",
+        "R12"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S13",
+      "file": "S13_chat_resultados_ricos.md",
+      "title": "Chat com resultados ricos e progresso completo",
+      "deps": [
+        "S03",
+        "S05",
+        "S11",
+        "S12"
+      ],
+      "requirements": [
+        "R03",
+        "R11",
+        "R13"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S14",
+      "file": "S14_geracao_html.md",
+      "title": "Geração de dashboards e apresentações HTML",
+      "deps": [
+        "S09",
+        "S11",
+        "S13"
+      ],
+      "requirements": [
+        "R08",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S15",
+      "file": "S15_editor_exportacao_html.md",
+      "title": "Editor visual, versões e exportação de artefatos",
+      "deps": [
+        "S14"
+      ],
+      "requirements": [
+        "R04",
+        "R14",
+        "R15"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S16",
+      "file": "S16_catalogo_sistemas.md",
+      "title": "Catálogo de sistemas e seletor no chat",
+      "deps": [
+        "S02",
+        "S05",
+        "S12",
+        "S13"
+      ],
+      "requirements": [
+        "R16",
+        "R17",
+        "R18",
+        "R24"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S17",
+      "file": "S17_executor_web.md",
+      "title": "Executor de automação web",
+      "deps": [
+        "S05",
+        "S06",
+        "S16"
+      ],
+      "requirements": [
+        "R17",
+        "R19",
+        "R24"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S18",
+      "file": "S18_executor_desktop.md",
+      "title": "Executor desktop e ambiente de ferramentas",
+      "deps": [
+        "S05",
+        "S06",
+        "S16",
+        "S17"
+      ],
+      "requirements": [
+        "R18",
+        "R19",
+        "R24"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S19",
+      "file": "S19_construtor_automacoes.md",
+      "title": "Construção e edição de automações por conversa",
+      "deps": [
+        "S12",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "requirements": [
+        "R19",
+        "R24",
+        "R11"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S20",
+      "file": "S20_pacotes_automacao.md",
+      "title": "Exportação, importação e compartilhamento de automações",
+      "deps": [
+        "S02",
+        "S04",
+        "S19"
+      ],
+      "requirements": [
+        "R04",
+        "R20",
+        "R24"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S21",
+      "file": "S21_prompts_guias_central.md",
+      "title": "Prompts, guias e central de conteúdo compartilhado",
+      "deps": [
+        "S12",
+        "S13",
+        "S15",
+        "S20"
+      ],
+      "requirements": [
+        "R04",
+        "R12",
+        "R21"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S22",
+      "file": "S22_integracoes_corporativas.md",
+      "title": "Homologação de fontes internas e jornadas completas",
+      "deps": [
+        "S11",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S20"
+      ],
+      "requirements": [
+        "R16",
+        "R17",
+        "R18",
+        "R22",
+        "R24",
+        "R14"
+      ],
+      "status": "PLANEJADA"
+    },
+    {
+      "id": "S23",
+      "file": "S23_homologacao_operacao.md",
+      "title": "Homologação final, desempenho e operação",
+      "deps": [
+        "S21",
+        "S22"
+      ],
+      "requirements": [
+        "R01",
+        "R02",
+        "R05",
+        "R07",
+        "R10",
+        "R11",
+        "R14",
+        "R15",
+        "R20",
+        "R23"
+      ],
+      "status": "PLANEJADA"
+    }
+  ]
+}
